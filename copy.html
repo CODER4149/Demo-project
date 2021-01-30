@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+ul,h2 {
+
+  list-style-type: none;
+  margin-top: 0px;
+  padding-top: 0px;
+  border-radius: 20px;
+  width: 200px;
+  background-color: #ada9a9;
+}
+
+li ,a {
+  border-radius: 20px;
+  display: block;
+  color: #000;
+  padding-top: 0px;
+  padding: 2px ;
+  text-decoration: none;
+}
+div.w3-container{
+  border-radius: 15px 50px;
+
+}
+li a:hover {
+  background-color: rgb(94, 15, 15);
+  color: white;
+  border-radius: 100%;
+  padding-right: 20%;
+}
+#data{
+  float: top right;
+}
+
+</style>
+<body style="background-image: url(ring.jpg); background-repeat: no-repeat;background-size: cover; ">
+  <audio  id="non"style ="float:right">
+
+    <source src="amhi tharloy aaj successful viki yadav1593262065273.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+  </audio>
+<!-- Content -->
+<div class="w3" style="max-width:300px;margin-top:0px;margin-bottom:0px;float: top-left;">
+
+   <ul id="data" style="display: none;">
+<li><button ><p id="demo1"></p></button></li>
+<li><button ><p id="demo2"></p></button></li>
+<li><button ><p id="demo3"></p></button></li>
+   </ul>
+   <ul id="data">
+<li><button onclick="demo1()">height</button></li>
+<li><button onclick="demo2()">weight</button></li>
+<li><button onclick="demo3()">rank</button></li>
+</ul>
+
+  <!-- Slideshow -->
+  <div class="w3-container">
+    <div class="w3-display-container mySlides">
+      <img src="roman.png" style="width:100%">
+      <div class="w3-display-topleft w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-top " >roman</span>
+
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="Seth.jpg" style="width:100%">
+      <div class="w3-display-middle w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-top">seth</span>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="randy.jpg" style="width:100%">
+      <div class="w3-display-topright w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-top">randy orton</span>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+        <img src="Deam.jpg" style="width:100%">
+        <div class="w3-display-topleft w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-top">deam</span>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+        <img src="brock.jpg" style="width:100%">
+        <div class="w3-display-middle w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-top">brock</span>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+        <img src="john.jpg" style="width:100%">
+        <div class="w3-display-topright w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-top">john cena</span>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+        <img src="GOLDBERG.jpg" style="width:100%">
+        <div class="w3-display-topleft w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-top">GOLDBERG</span>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+        <img src="rock.jpg" style="width:100%">
+        <div class="w3-display-middle w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-top">rock </span>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+        <img src="undertaker.jpg" style="width:100%">
+        <div class="w3-display-topright w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-top">undertaker</span>
+        </div>
+      </div>
+
+    <!-- Slideshow next/previous buttons -->
+    <div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+      <div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
+      <div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
+      <div class="w3-center">
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(7)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(8)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(9)"></span>
+      </div>
+
+  </div>
+</div>
+    <h2 id="hed1"style="display: none;"></h2><h1 id="result" style=" font-family: Copperplate, Papyrus, fantasy; text-align:right"></h1>
+  </div>
+<div id="showi"></div>
+ <a href="#" onclick="clash()" id="start"><h2>clash</h2></a>
+ <div class="w3-content" id="d" style="max-width:300px;margin-top:0px;float: right;">
+
+  <ul id="data1" style="float: right; display: none;">
+    <li><button onclick="demo11()"><p id="demo11"></p></button></li>
+    <li><button onclick="demo21()"><p id="demo21"></p></button></li>
+    <li><button onclick="demo31()"><p id="demo31"></p></button></li>
+    </ul>
+    <ul id="data">
+      <li><button onclick="demo11()">height</button></li>
+      <li><button onclick="demo21()">weight</button></li>
+      <li><button onclick="demo31()">rank</button></li>
+      </ul>
+    <h2 id="hed2" style="display: none;"></h2>
+
+    <!-- Slideshow -->
+    <div class="w3-container">
+      <div class="w3-display-container mySlides">
+        <img src="roman.png" style="width:100%">
+        <div class="w3-display-topleft w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-top " id="rom">roman</span>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+        <img src="Seth.jpg" style="width:100%">
+        <div class="w3-display-middle w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-top">seth </span>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+        <img src="randy.jpg" style="width:100%">
+        <div class="w3-display-topright w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-top">randy orton</span>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+          <img src="Deam.jpg" style="width:100%">
+          <div class="w3-display-topleft w3-container w3-padding-32">
+            <span class="w3-white w3-padding-large w3-animate-bottom">deam</span>
+          </div>
+        </div>
+        <div class="w3-display-container mySlides">
+          <img src="brock.jpg" style="width:100%">
+          <div class="w3-display-middle w3-container w3-padding-32">
+            <span class="w3-white w3-padding-large w3-animate-top">brock</span>
+          </div>
+        </div>
+        <div class="w3-display-container mySlides">
+          <img src="john.jpg" style="width:100%">
+          <div class="w3-display-topright w3-container w3-padding-32">
+            <span class="w3-white w3-padding-large w3-animate-top">john cena</span>
+          </div>
+        </div>
+        <div class="w3-display-container mySlides">
+          <img src="GOLDBERG.jpg" style="width:100%">
+          <div class="w3-display-topleft w3-container w3-padding-32">
+            <span class="w3-white w3-padding-large w3-animate-top">GOLDBERG</span>
+          </div>
+        </div>
+        <div class="w3-display-container mySlides">
+          <img src="rock.jpg" style="width:100%">
+          <div class="w3-display-middle w3-container w3-padding-32">
+            <span class="w3-white w3-padding-large w3-animate-top">rock </span>
+          </div>
+        </div>
+        <div class="w3-display-container mySlides">
+          <img src="undertaker.jpg" style="width:100%">
+          <div class="w3-display-topright w3-container w3-padding-32">
+            <span class="w3-white w3-padding-large w3-animate-top">undertaker</span>
+          </div>
+        </div>
+
+      <!-- Slideshow next/previous buttons -->
+      <div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+        <div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
+        <div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
+        <div class="w3-center">
+            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(10)"></span>
+            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(11)"></span>
+            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(12)"></span>
+            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(13)"></span>
+            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(14)"></span>
+            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(15)"></span>
+            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(16)"></span>
+            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(17)"></span>
+            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(18)"></span>
+          </div>
+
+    </div>
+  </div>
+
+
+   </div>
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length;}
+  var player1 = document.getElementById("rom").innerHTML;
+  for (i = 0; i < x.length; i++) {
+
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+
+
+
+  }
+  if(n==1){
+      var a = { height: 6.3,weight:120 , rank: 5}
+    var rh=document.getElementById("demo1").innerHTML = a.height;
+    var rw=document.getElementById("demo2").innerHTML =a.weight ;
+    var rr=document.getElementById("demo3").innerHTML = a.rank;
+
+    }
+    if(n==2){
+      var a = { height: 6.1,weight:98 , rank: 2}
+      document.getElementById("demo1").innerHTML = a.height;
+    document.getElementById("demo2").innerHTML =a.weight ;
+    document.getElementById("demo3").innerHTML = a.rank;
+    }
+    if(n==3){
+      var a = { height: 6.5,weight:113 , rank: 91}
+      document.getElementById("demo1").innerHTML = a.height;
+    document.getElementById("demo2").innerHTML =a.weight ;
+    document.getElementById("demo3").innerHTML = a.rank;
+    }
+    if(n==4){
+      var a = { height: 6.4,weight:102 , rank: 9}
+      document.getElementById("demo1").innerHTML = a.height;
+    document.getElementById("demo2").innerHTML =a.weight ;
+    document.getElementById("demo3").innerHTML = a.rank;
+    }
+    if(n==5){
+      var a = { height: 6.3,weight:130 , rank: 3}
+    document.getElementById("demo1").innerHTML = a.height;
+    document.getElementById("demo2").innerHTML =a.weight ;
+    document.getElementById("demo3").innerHTML = a.rank;
+    }
+    if(n==6){
+      var a = { height: 6.1,weight:114 , rank:90}
+      document.getElementById("demo1").innerHTML = a.height;
+    document.getElementById("demo2").innerHTML =a.weight ;
+    document.getElementById("demo3").innerHTML = a.rank;
+    }
+    if(n==7){
+      var a = { height: 6.4,weight:121 , rank: 1}
+      document.getElementById("demo1").innerHTML = a.height;
+    document.getElementById("demo2").innerHTML =a.weight ;
+    document.getElementById("demo3").innerHTML = a.rank;
+    }
+    if(n==8){
+      var a = { height: 6.5,weight:118 , rank: 4}
+      document.getElementById("demo1").innerHTML = a.height;
+    document.getElementById("demo2").innerHTML =a.weight ;
+    document.getElementById("demo3").innerHTML = a.rank;
+    }
+    if(n==9){
+      var a = { height:7,weight:136 , rank: 7}
+      document.getElementById("demo1").innerHTML = a.height;
+    document.getElementById("demo2").innerHTML =a.weight ;
+    document.getElementById("demo3").innerHTML = a.rank;
+    }
+    var show1= x[slideIndex-1].style.display = "block";
+
+    if(n==10){
+      var a = { height: 6.3,weight:120 , rank: 5}
+      document.getElementById("demo11").innerHTML = a.height;
+    document.getElementById("demo21").innerHTML =a.weight ;
+    document.getElementById("demo31").innerHTML = a.rank;
+
+    }
+    if(n==11){
+      var a = { height: 6.1,weight:98 , rank: 2}
+      document.getElementById("demo11").innerHTML = a.height;
+    document.getElementById("demo21").innerHTML =a.weight ;
+    document.getElementById("demo31").innerHTML = a.rank;
+    }
+    if(n==12){
+      var a = { height: 6.5,weight:113 , rank: 91}
+      document.getElementById("demo11").innerHTML = a.height;
+    document.getElementById("demo21").innerHTML =a.weight ;
+    document.getElementById("demo31").innerHTML = a.rank;
+    }
+    if(n==13){
+      var a = { height: 6.4,weight:102 , rank: 9}
+      document.getElementById("demo11").innerHTML = a.height;
+    document.getElementById("demo21").innerHTML =a.weight ;
+    document.getElementById("demo31").innerHTML = a.rank;
+    }
+    if(n==14){
+      var a = { height: 6.3,weight:130 , rank: 3}
+      document.getElementById("demo11").innerHTML = a.height;
+    document.getElementById("demo21").innerHTML =a.weight ;
+    document.getElementById("demo31").innerHTML = a.rank;
+    }
+    if(n==15){
+      var a = { height: 6.1,weight:114 , rank:90}
+      document.getElementById("demo11").innerHTML = a.height;
+    document.getElementById("demo21").innerHTML =a.weight ;
+    document.getElementById("demo31").innerHTML = a.rank;
+    }
+    if(n==16){
+      var a = { height: 6.4,weight:121 , rank: 1}
+      document.getElementById("demo11").innerHTML = a.height;
+    document.getElementById("demo21").innerHTML =a.weight ;
+    document.getElementById("demo31").innerHTML = a.rank;
+    }
+    if(n==17){
+      var a = { height: 6.5,weight:118 , rank: 4}
+      document.getElementById("demo11").innerHTML = a.height;
+    document.getElementById("demo21").innerHTML =a.weight ;
+    document.getElementById("demo31").innerHTML = a.rank;
+    }
+    if(n==18){
+      var a = { height: 7,weight:136 , rank: 7}
+      document.getElementById("demo11").innerHTML = a.height;
+    document.getElementById("demo21").innerHTML =a.weight ;
+    document.getElementById("demo31").innerHTML = a.rank;
+    }
+ var show2= x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-white";
+}
+function demo1(){
+  var store = document.getElementById("demo1").innerHTML;
+  var convert = +store;
+  console.log(convert);
+  document.getElementById("hed1").innerHTML=convert;
+}
+function demo2(){
+  var store = document.getElementById("demo2").innerHTML;
+  var convert = +store;
+  console.log(convert);
+  document.getElementById("hed1").innerHTML=convert;
+}
+function demo3(){
+  var store = document.getElementById("demo3").innerHTML;
+  var convert = +store;
+  console.log(convert);
+  document.getElementById("hed1").innerHTML=convert;
+}
+function demo11(){
+  var store = document.getElementById("demo11").innerHTML;
+  var convert = +store;
+  console.log(convert);
+  document.getElementById("hed2").innerHTML=convert;
+}
+function demo21(){
+  var store = document.getElementById("demo21").innerHTML;
+  var convert = +store;
+  console.log(convert);
+  document.getElementById("hed2").innerHTML=convert;
+}
+function demo31(){
+  var store = document.getElementById("demo31").innerHTML;
+  var convert = +store;
+  console.log(convert);
+  document.getElementById("hed2").innerHTML=convert;
+}
+function clash(){
+  var get1 = document.getElementById("hed1").innerHTML;
+  var con1 = +get1;
+  console.log(get1);
+  var get2 = document.getElementById("hed2").innerHTML;
+  var con2 = +get2;
+  console.log(get2);
+  var x = document.getElementById("non");
+  if(con1>con2){
+    var win =document.getElementById("result").innerHTML= "PLAYER1 WON";console.log(win);
+    // x.play();
+    document.getElementById("showi").style.display=show2;
+  }else if(con1==con2){
+   var win2= document.getElementById("result").innerHTML= "match tie";console.log(win2);
+  //  x.play();
+   document.getElementById("showi").style.display=show2;
+  }else{
+   var win2= document.getElementById("result").innerHTML= "PLAYER2 WON";console.log(win2);
+  //  x.play();
+   document.getElementById("showi").style.display=show2;
+  }
+
+
+  }
+
+</script>
+</body>
+</html>

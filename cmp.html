@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #left {
+          float: left;
+          width: 200px;
+          background-color: rgb(148, 53, 53);
+          margin-right: 100px;
+      }
+      #right {
+          float: right;
+          width: 200px;
+          background-color: rgb(206, 92, 92);
+      }
+    </style>
+  </head>
+<body style="background-image: url(ring.jpg);background-repeat: no-repeat;background-size: 120%;">
+height:
+<button id="demo" onclick="compare()"></button>
+weight:
+<button id="demo2" onclick="compare1()"></button>
+rank:
+<button id="demo3" onclick="compare2()"></button>
+
+
+<div id="left">
+  team 1: <br><br><br>
+<button id="p1" onclick="r1(0)"></button><br>
+<button id="p2" onclick="r1(1)"></button><br>
+<button id="p3" onclick="r1(2)"></button><br>
+<button id="p4" onclick="r1(3)"></button><br>
+<button id="p5" onclick="r1(4)"></button><br>
+<button id="p6" onclick="r1(5)"></button><br>
+<button id="p7" onclick="r1(6)"></button><br>
+<button id="p8" onclick="r1(7)"></button><br>
+<button id="p9" onclick="r1(8)"></button><br>
+<button id="p10" onclick="r1(9)"></button><br>
+<button id="p11" onclick="r1(10)"></button><br>
+<button id="p12" onclick="r1(11)"></button><br><br></div>
+
+
+<div id="right">
+  team:2 <br><br><br>
+<button id="p01"></button><br>
+<button id="p02"></button><br>
+<button id="p03"></button><br>
+<button id="p04"></button><br>
+<button id="p05"></button><br>
+<button id="p06"></button><br>
+<button id="p07"></button><br>
+<button id="p08"></button><br>
+<button id="p09"></button><br>
+<button id="p010"></button><br>
+<button id="p011"></button><br>
+<button id="p012"></button><br><br>
+</div>
+
+<br><br><br>
+<button onclick="myFunction()"style="text-align:center;">show</button>
+<div id="img" style="width: 500px;display: none;"> <p id="s1"></p></div>
+<div><h1 id="hed"></h1></div>
+
+<script>
+  
+var players=[{name:"roman",height:"6.4",weight:"120",rank:"3"},
+{name:"randy",height:"6.2",weight:"113",rank:"5"},
+{name:"goldberg",height:"6.3",weight:"130",rank:"1"},
+{name:"brock",height:'6',weight:"130",rank:"2"},
+{name:"seth",height:"6.3",weight:'117',rank:'4'},
+{name:"deam",height:"6",weight:"104",rank:"6"},
+{name:"undertacker",height:"7",weight:"136",rank:"7"},
+{name:"bigshow",height:"7",weight:"176",rank:"8"},
+{name:"gymmy",height:"6.2",weight:"120",rank:"9"},
+{name:"batista",height:'6.5',weight:"140",rank:"10"},
+{name:"bige",height:"6.1",weight:'150',rank:'11'},
+{name:"shemus",height:"6",weight:"112",rank:"12"}];
+function myFunction(){
+  var x="";
+  var y="";
+  var y1,y2,y3;
+  for(var i=0;i<12;i++){
+  var randam =Math.floor(Math.random() * 12);
+   x= players[randam].name;
+   if(i==0){
+    document.getElementById("p1").innerHTML=x;
+   }else if(i==1){
+    document.getElementById("p2").innerHTML=x;
+   }else if(i==2){
+    document.getElementById("p3").innerHTML=x;
+   }else if(i==3){
+    document.getElementById("p4").innerHTML=x;
+   }else if(i==4){
+    document.getElementById("p5").innerHTML=x;
+   }else if(i==5){
+    document.getElementById("p6").innerHTML=x;
+   }else if(i==6){
+    document.getElementById("p7").innerHTML=x;
+   }else if(i==7){
+    document.getElementById("p8").innerHTML=x;
+   }else if(i==8){
+    document.getElementById("p9").innerHTML=x;
+   }else if(i==9){
+    document.getElementById("p10").innerHTML=x;
+   }else if(i==10){
+    document.getElementById("p11").innerHTML=x;
+   }else if(i==11){
+    document.getElementById("p12").innerHTML=x;
+   }
+   
+}
+for(var i=0;i<12;i++){
+  var randam =Math.floor(Math.random() * 12);
+  y=players[randam].name;
+  y1= +players[randam].height;
+  y2= +players[randam].weight;
+  y3= +players[randam].rank;
+  console.log(y1);
+  compare(y1);
+
+  
+  if(i==0){
+    document.getElementById("p01").innerHTML=y;
+   }else if(i==1){
+    document.getElementById("p02").innerHTML=y;
+   }else if(i==2){
+    document.getElementById("p03").innerHTML=y;
+   }else if(i==3){
+    document.getElementById("p04").innerHTML=y;
+   }else if(i==4){
+    document.getElementById("p05").innerHTML=y;
+   }else if(i==5){
+    document.getElementById("p06").innerHTML=y;
+   }else if(i==6){
+    document.getElementById("p07").innerHTML=y;
+   }else if(i==7){
+    document.getElementById("p08").innerHTML=y;
+   }else if(i==8){
+    document.getElementById("p09").innerHTML=y;
+   }else if(i==9){
+    document.getElementById("p010").innerHTML=y;
+   }else if(i==10){
+    document.getElementById("p011").innerHTML=y;
+   }else if(i==11){
+    document.getElementById("p012").innerHTML=y;
+   }
+}
+
+}
+function r1(n){
+
+  var a1=document.getElementById("p1").innerHTML;
+  var a2=document.getElementById("p2").innerHTML;
+  var a3=document.getElementById("p3").innerHTML;
+  var a4=document.getElementById("p4").innerHTML;
+  var a5=document.getElementById("p5").innerHTML;
+  var a6=document.getElementById("p6").innerHTML;
+  var a7=document.getElementById("p7").innerHTML;
+  var a8=document.getElementById("p8").innerHTML;
+  var a9=document.getElementById("p9").innerHTML;
+  var a10=document.getElementById("p10").innerHTML;
+  var a11=document.getElementById("p11").innerHTML;
+  var a12=document.getElementById("p12").innerHTML;
+  var arr=[a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12];
+  
+  if(n==0){
+  if(arr[0]=="roman"){
+    document.getElementById("demo").innerHTML=players[0].height ;
+    document.getElementById("demo2").innerHTML=players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[0]=="randy"){
+    document.getElementById("demo").innerHTML=players[1].height ;
+    document.getElementById("demo2").innerHTML=players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[0]=="goldberg"){
+    document.getElementById("demo").innerHTML= players[2].height ;
+    document.getElementById("demo2").innerHTML=+ players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[0]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML= players[3].rank ;
+  }else if(arr[0]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML=players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[0]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[0]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[0]=="bigshow"){
+    document.getElementById("demo").innerHTML= players[7].height ;
+    document.getElementById("demo2").innerHTML= players[7].weight ;
+    document.getElementById("demo3").innerHTML= players[7].rank ;
+  }else if(arr[0]=="gymmy"){
+    document.getElementById("demo").innerHTML= players[8].height ;
+    document.getElementById("demo2").innerHTML= players[8].weight ;
+    document.getElementById("demo3").innerHTML= players[8].rank ;
+  }else if(arr[0]=="batista"){
+    document.getElementById("demo").innerHTML= players[9].height ;
+    document.getElementById("demo2").innerHTML= players[9].weight ;
+    document.getElementById("demo3").innerHTML= players[9].rank ;
+  }else if(arr[0]=="bige"){
+    document.getElementById("demo").innerHTML= players[10].height ;
+    document.getElementById("demo2").innerHTML= players[10].weight ;
+    document.getElementById("demo3").innerHTML= players[10].rank ;
+  }else if(arr[0]=="shemus"){
+    document.getElementById("demo").innerHTML=players[11].height ;
+    document.getElementById("demo2").innerHTML= players[11].weight ;
+    document.getElementById("demo3").innerHTML= players[11].rank ;
+  }
+    }
+    if(n==1){
+  if(arr[1]=="roman"){
+    document.getElementById("demo").innerHTML= players[0].height ;
+    document.getElementById("demo2").innerHTML= players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[1]=="randy"){
+    document.getElementById("demo").innerHTML= players[1].height ;
+    document.getElementById("demo2").innerHTML= players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[1]=="goldberg"){
+    document.getElementById("demo").innerHTML=players[2].height ;
+    document.getElementById("demo2").innerHTML= players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[1]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML=players[3].rank ;
+  }else if(arr[1]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML= players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[1]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[1]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[1]=="bigshow"){
+    document.getElementById("demo").innerHTML= +players[7].height ;
+    document.getElementById("demo2").innerHTML= +players[7].weight ;
+    document.getElementById("demo3").innerHTML= +players[7].rank ;
+  }else if(arr[1]=="gymmy"){
+    document.getElementById("demo").innerHTML= +players[8].height ;
+    document.getElementById("demo2").innerHTML= +players[8].weight ;
+    document.getElementById("demo3").innerHTML= +players[8].rank ;
+  }else if(arr[1]=="batista"){
+    document.getElementById("demo").innerHTML= +players[9].height ;
+    document.getElementById("demo2").innerHTML= +players[9].weight ;
+    document.getElementById("demo3").innerHTML= +players[9].rank ;
+  }else if(arr[1]=="bige"){
+    document.getElementById("demo").innerHTML= +players[10].height ;
+    document.getElementById("demo2").innerHTML= +players[10].weight ;
+    document.getElementById("demo3").innerHTML= +players[10].rank ;
+  }else if(arr[1]=="shemus"){
+    document.getElementById("demo").innerHTML= +players[11].height ;
+    document.getElementById("demo2").innerHTML= +players[11].weight ;
+    document.getElementById("demo3").innerHTML= +players[11].rank ;
+  }
+    }
+    if(n==2){
+  if(arr[2]=="roman"){
+    document.getElementById("demo").innerHTML=players[0].height ;
+    document.getElementById("demo2").innerHTML=players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[2]=="randy"){
+    document.getElementById("demo").innerHTML=players[1].height ;
+    document.getElementById("demo2").innerHTML=players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[2]=="goldberg"){
+    document.getElementById("demo").innerHTML= players[2].height ;
+    document.getElementById("demo2").innerHTML=+ players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[2]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML= players[3].rank ;
+  }else if(arr[2]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML=players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[2]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[2]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[2]=="bigshow"){
+    document.getElementById("demo").innerHTML= players[7].height ;
+    document.getElementById("demo2").innerHTML= players[7].weight ;
+    document.getElementById("demo3").innerHTML= players[7].rank ;
+  }else if(arr[2]=="gymmy"){
+    document.getElementById("demo").innerHTML= players[8].height ;
+    document.getElementById("demo2").innerHTML= players[8].weight ;
+    document.getElementById("demo3").innerHTML= players[8].rank ;
+  }else if(arr[2]=="batista"){
+    document.getElementById("demo").innerHTML= players[9].height ;
+    document.getElementById("demo2").innerHTML= players[9].weight ;
+    document.getElementById("demo3").innerHTML= players[9].rank ;
+  }else if(arr[2]=="bige"){
+    document.getElementById("demo").innerHTML= players[10].height ;
+    document.getElementById("demo2").innerHTML= players[10].weight ;
+    document.getElementById("demo3").innerHTML= players[10].rank ;
+  }else if(arr[2]=="shemus"){
+    document.getElementById("demo").innerHTML=players[11].height ;
+    document.getElementById("demo2").innerHTML= players[11].weight ;
+    document.getElementById("demo3").innerHTML= players[11].rank ;
+  }
+    }
+    if(n==3){
+  if(arr[3]=="roman"){
+    document.getElementById("demo").innerHTML= players[0].height ;
+    document.getElementById("demo2").innerHTML= players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[3]=="randy"){
+    document.getElementById("demo").innerHTML= players[1].height ;
+    document.getElementById("demo2").innerHTML= players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[3]=="goldberg"){
+    document.getElementById("demo").innerHTML=players[2].height ;
+    document.getElementById("demo2").innerHTML= players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[3]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML=players[3].rank ;
+  }else if(arr[3]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML= players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[3]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[3]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[3]=="bigshow"){
+    document.getElementById("demo").innerHTML= +players[7].height ;
+    document.getElementById("demo2").innerHTML= +players[7].weight ;
+    document.getElementById("demo3").innerHTML= +players[7].rank ;
+  }else if(arr[3]=="gymmy"){
+    document.getElementById("demo").innerHTML= +players[8].height ;
+    document.getElementById("demo2").innerHTML= +players[8].weight ;
+    document.getElementById("demo3").innerHTML= +players[8].rank ;
+  }else if(arr[3]=="batista"){
+    document.getElementById("demo").innerHTML= +players[9].height ;
+    document.getElementById("demo2").innerHTML= +players[9].weight ;
+    document.getElementById("demo3").innerHTML= +players[9].rank ;
+  }else if(arr[3]=="bige"){
+    document.getElementById("demo").innerHTML= +players[10].height ;
+    document.getElementById("demo2").innerHTML= +players[10].weight ;
+    document.getElementById("demo3").innerHTML= +players[10].rank ;
+  }else if(arr[3]=="shemus"){
+    document.getElementById("demo").innerHTML= +players[11].height ;
+    document.getElementById("demo2").innerHTML= +players[11].weight ;
+    document.getElementById("demo3").innerHTML= +players[11].rank ;
+  }
+    }
+    if(n==4){
+  if(arr[4]=="roman"){
+    document.getElementById("demo").innerHTML=players[0].height ;
+    document.getElementById("demo2").innerHTML=players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[4]=="randy"){
+    document.getElementById("demo").innerHTML=players[1].height ;
+    document.getElementById("demo2").innerHTML=players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[4]=="goldberg"){
+    document.getElementById("demo").innerHTML= players[2].height ;
+    document.getElementById("demo2").innerHTML=+ players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[4]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML= players[3].rank ;
+  }else if(arr[4]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML=players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[4]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[4]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[4]=="bigshow"){
+    document.getElementById("demo").innerHTML= players[7].height ;
+    document.getElementById("demo2").innerHTML= players[7].weight ;
+    document.getElementById("demo3").innerHTML= players[7].rank ;
+  }else if(arr[4]=="gymmy"){
+    document.getElementById("demo").innerHTML= players[8].height ;
+    document.getElementById("demo2").innerHTML= players[8].weight ;
+    document.getElementById("demo3").innerHTML= players[8].rank ;
+  }else if(arr[4]=="batista"){
+    document.getElementById("demo").innerHTML= players[9].height ;
+    document.getElementById("demo2").innerHTML= players[9].weight ;
+    document.getElementById("demo3").innerHTML= players[9].rank ;
+  }else if(arr[4]=="bige"){
+    document.getElementById("demo").innerHTML= players[10].height ;
+    document.getElementById("demo2").innerHTML= players[10].weight ;
+    document.getElementById("demo3").innerHTML= players[10].rank ;
+  }else if(arr[4]=="shemus"){
+    document.getElementById("demo").innerHTML=players[11].height ;
+    document.getElementById("demo2").innerHTML= players[11].weight ;
+    document.getElementById("demo3").innerHTML= players[11].rank ;
+  }
+    }
+    if(n==5){
+  if(arr[5]=="roman"){
+    document.getElementById("demo").innerHTML= players[0].height ;
+    document.getElementById("demo2").innerHTML= players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[5]=="randy"){
+    document.getElementById("demo").innerHTML= players[1].height ;
+    document.getElementById("demo2").innerHTML= players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[5]=="goldberg"){
+    document.getElementById("demo").innerHTML=players[2].height ;
+    document.getElementById("demo2").innerHTML= players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[5]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML=players[3].rank ;
+  }else if(arr[5]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML= players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[5]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[5]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[5]=="bigshow"){
+    document.getElementById("demo").innerHTML= +players[7].height ;
+    document.getElementById("demo2").innerHTML= +players[7].weight ;
+    document.getElementById("demo3").innerHTML= +players[7].rank ;
+  }else if(arr[5]=="gymmy"){
+    document.getElementById("demo").innerHTML= +players[8].height ;
+    document.getElementById("demo2").innerHTML= +players[8].weight ;
+    document.getElementById("demo3").innerHTML= +players[8].rank ;
+  }else if(arr[5]=="batista"){
+    document.getElementById("demo").innerHTML= +players[9].height ;
+    document.getElementById("demo2").innerHTML= +players[9].weight ;
+    document.getElementById("demo3").innerHTML= +players[9].rank ;
+  }else if(arr[5]=="bige"){
+    document.getElementById("demo").innerHTML= +players[10].height ;
+    document.getElementById("demo2").innerHTML= +players[10].weight ;
+    document.getElementById("demo3").innerHTML= +players[10].rank ;
+  }else if(arr[5]=="shemus"){
+    document.getElementById("demo").innerHTML= +players[11].height ;
+    document.getElementById("demo2").innerHTML= +players[11].weight ;
+    document.getElementById("demo3").innerHTML= +players[11].rank ;
+  }
+    }
+    if(n==6){
+  if(arr[6]=="roman"){
+    document.getElementById("demo").innerHTML=players[0].height ;
+    document.getElementById("demo2").innerHTML=players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[6]=="randy"){
+    document.getElementById("demo").innerHTML=players[1].height ;
+    document.getElementById("demo2").innerHTML=players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[6]=="goldberg"){
+    document.getElementById("demo").innerHTML= players[2].height ;
+    document.getElementById("demo2").innerHTML=+ players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[6]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML= players[3].rank ;
+  }else if(arr[6]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML=players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[6]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[6]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[6]=="bigshow"){
+    document.getElementById("demo").innerHTML= players[7].height ;
+    document.getElementById("demo2").innerHTML= players[7].weight ;
+    document.getElementById("demo3").innerHTML= players[7].rank ;
+  }else if(arr[6]=="gymmy"){
+    document.getElementById("demo").innerHTML= players[8].height ;
+    document.getElementById("demo2").innerHTML= players[8].weight ;
+    document.getElementById("demo3").innerHTML= players[8].rank ;
+  }else if(arr[6]=="batista"){
+    document.getElementById("demo").innerHTML= players[9].height ;
+    document.getElementById("demo2").innerHTML= players[9].weight ;
+    document.getElementById("demo3").innerHTML= players[9].rank ;
+  }else if(arr[6]=="bige"){
+    document.getElementById("demo").innerHTML= players[10].height ;
+    document.getElementById("demo2").innerHTML= players[10].weight ;
+    document.getElementById("demo3").innerHTML= players[10].rank ;
+  }else if(arr[6]=="shemus"){
+    document.getElementById("demo").innerHTML=players[11].height ;
+    document.getElementById("demo2").innerHTML= players[11].weight ;
+    document.getElementById("demo3").innerHTML= players[11].rank ;
+  }
+    }
+    if(n==7){
+  if(arr[7]=="roman"){
+    document.getElementById("demo").innerHTML= players[0].height ;
+    document.getElementById("demo2").innerHTML= players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[7]=="randy"){
+    document.getElementById("demo").innerHTML= players[1].height ;
+    document.getElementById("demo2").innerHTML= players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[7]=="goldberg"){
+    document.getElementById("demo").innerHTML=players[2].height ;
+    document.getElementById("demo2").innerHTML= players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[7]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML=players[3].rank ;
+  }else if(arr[7]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML= players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[7]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[7]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[7]=="bigshow"){
+    document.getElementById("demo").innerHTML= +players[7].height ;
+    document.getElementById("demo2").innerHTML= +players[7].weight ;
+    document.getElementById("demo3").innerHTML= +players[7].rank ;
+  }else if(arr[7]=="gymmy"){
+    document.getElementById("demo").innerHTML= +players[8].height ;
+    document.getElementById("demo2").innerHTML= +players[8].weight ;
+    document.getElementById("demo3").innerHTML= +players[8].rank ;
+  }else if(arr[7]=="batista"){
+    document.getElementById("demo").innerHTML= +players[9].height ;
+    document.getElementById("demo2").innerHTML= +players[9].weight ;
+    document.getElementById("demo3").innerHTML= +players[9].rank ;
+  }else if(arr[7]=="bige"){
+    document.getElementById("demo").innerHTML= +players[10].height ;
+    document.getElementById("demo2").innerHTML= +players[10].weight ;
+    document.getElementById("demo3").innerHTML= +players[10].rank ;
+  }else if(arr[7]=="shemus"){
+    document.getElementById("demo").innerHTML= +players[11].height ;
+    document.getElementById("demo2").innerHTML= +players[11].weight ;
+    document.getElementById("demo3").innerHTML= +players[11].rank ;
+  }
+    }
+    if(n==8){
+  if(arr[8]=="roman"){
+    document.getElementById("demo").innerHTML=players[0].height ;
+    document.getElementById("demo2").innerHTML=players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[8]=="randy"){
+    document.getElementById("demo").innerHTML=players[1].height ;
+    document.getElementById("demo2").innerHTML=players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[8]=="goldberg"){
+    document.getElementById("demo").innerHTML= players[2].height ;
+    document.getElementById("demo2").innerHTML=+ players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[8]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML= players[3].rank ;
+  }else if(arr[8]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML=players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[8]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[8]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[8]=="bigshow"){
+    document.getElementById("demo").innerHTML= players[7].height ;
+    document.getElementById("demo2").innerHTML= players[7].weight ;
+    document.getElementById("demo3").innerHTML= players[7].rank ;
+  }else if(arr[8]=="gymmy"){
+    document.getElementById("demo").innerHTML= players[8].height ;
+    document.getElementById("demo2").innerHTML= players[8].weight ;
+    document.getElementById("demo3").innerHTML= players[8].rank ;
+  }else if(arr[8]=="batista"){
+    document.getElementById("demo").innerHTML= players[9].height ;
+    document.getElementById("demo2").innerHTML= players[9].weight ;
+    document.getElementById("demo3").innerHTML= players[9].rank ;
+  }else if(arr[8]=="bige"){
+    document.getElementById("demo").innerHTML= players[10].height ;
+    document.getElementById("demo2").innerHTML= players[10].weight ;
+    document.getElementById("demo3").innerHTML= players[10].rank ;
+  }else if(arr[8]=="shemus"){
+    document.getElementById("demo").innerHTML=players[11].height ;
+    document.getElementById("demo2").innerHTML= players[11].weight ;
+    document.getElementById("demo3").innerHTML= players[11].rank ;
+  }
+    }
+    if(n==9){
+  if(arr[9]=="roman"){
+    document.getElementById("demo").innerHTML= players[0].height ;
+    document.getElementById("demo2").innerHTML= players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[9]=="randy"){
+    document.getElementById("demo").innerHTML= players[1].height ;
+    document.getElementById("demo2").innerHTML= players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[9]=="goldberg"){
+    document.getElementById("demo").innerHTML=players[2].height ;
+    document.getElementById("demo2").innerHTML= players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[9]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML=players[3].rank ;
+  }else if(arr[9]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML= players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[9]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[9]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[9]=="bigshow"){
+    document.getElementById("demo").innerHTML= +players[7].height ;
+    document.getElementById("demo2").innerHTML= +players[7].weight ;
+    document.getElementById("demo3").innerHTML= +players[7].rank ;
+  }else if(arr[9]=="gymmy"){
+    document.getElementById("demo").innerHTML= +players[8].height ;
+    document.getElementById("demo2").innerHTML= +players[8].weight ;
+    document.getElementById("demo3").innerHTML= +players[8].rank ;
+  }else if(arr[9]=="batista"){
+    document.getElementById("demo").innerHTML= +players[9].height ;
+    document.getElementById("demo2").innerHTML= +players[9].weight ;
+    document.getElementById("demo3").innerHTML= +players[9].rank ;
+  }else if(arr[9]=="bige"){
+    document.getElementById("demo").innerHTML= +players[10].height ;
+    document.getElementById("demo2").innerHTML= +players[10].weight ;
+    document.getElementById("demo3").innerHTML= +players[10].rank ;
+  }else if(arr[9]=="shemus"){
+    document.getElementById("demo").innerHTML= +players[11].height ;
+    document.getElementById("demo2").innerHTML= +players[11].weight ;
+    document.getElementById("demo3").innerHTML= +players[11].rank ;
+  }
+    }
+    if(n==10){
+  if(arr[10]=="roman"){
+    document.getElementById("demo").innerHTML=players[0].height ;
+    document.getElementById("demo2").innerHTML=players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[10]=="randy"){
+    document.getElementById("demo").innerHTML=players[1].height ;
+    document.getElementById("demo2").innerHTML=players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[10]=="goldberg"){
+    document.getElementById("demo").innerHTML= players[2].height ;
+    document.getElementById("demo2").innerHTML=+ players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[10]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML= players[3].rank ;
+  }else if(arr[10]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML=players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[10]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[10]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[10]=="bigshow"){
+    document.getElementById("demo").innerHTML= players[7].height ;
+    document.getElementById("demo2").innerHTML= players[7].weight ;
+    document.getElementById("demo3").innerHTML= players[7].rank ;
+  }else if(arr[10]=="gymmy"){
+    document.getElementById("demo").innerHTML= players[8].height ;
+    document.getElementById("demo2").innerHTML= players[8].weight ;
+    document.getElementById("demo3").innerHTML= players[8].rank ;
+  }else if(arr[10]=="batista"){
+    document.getElementById("demo").innerHTML= players[9].height ;
+    document.getElementById("demo2").innerHTML= players[9].weight ;
+    document.getElementById("demo3").innerHTML= players[9].rank ;
+  }else if(arr[10]=="bige"){
+    document.getElementById("demo").innerHTML= players[10].height ;
+    document.getElementById("demo2").innerHTML= players[10].weight ;
+    document.getElementById("demo3").innerHTML= players[10].rank ;
+  }else if(arr[10]=="shemus"){
+    document.getElementById("demo").innerHTML=players[11].height ;
+    document.getElementById("demo2").innerHTML= players[11].weight ;
+    document.getElementById("demo3").innerHTML= players[11].rank ;
+  }
+    }
+    if(n==11){
+  if(arr[11]=="roman"){
+    document.getElementById("demo").innerHTML= players[0].height ;
+    document.getElementById("demo2").innerHTML= players[0].weight ;
+    document.getElementById("demo3").innerHTML= players[0].rank ;
+    
+  } else if(arr[11]=="randy"){
+    document.getElementById("demo").innerHTML= players[1].height ;
+    document.getElementById("demo2").innerHTML= players[1].weight ;
+    document.getElementById("demo3").innerHTML= players[1].rank ;
+  }else if(arr[11]=="goldberg"){
+    document.getElementById("demo").innerHTML=players[2].height ;
+    document.getElementById("demo2").innerHTML= players[2].weight ;
+    document.getElementById("demo3").innerHTML= players[2].rank ;
+  }else if(arr[11]=="brock"){
+    document.getElementById("demo").innerHTML= players[3].height ;
+    document.getElementById("demo2").innerHTML= players[3].weight ;
+    document.getElementById("demo3").innerHTML=players[3].rank ;
+  }else if(arr[11]=="seth"){
+    document.getElementById("demo").innerHTML= players[4].height ;
+    document.getElementById("demo2").innerHTML= players[4].weight ;
+    document.getElementById("demo3").innerHTML= players[4].rank ;
+  }else if(arr[11]=="deam"){
+    document.getElementById("demo").innerHTML= players[5].height ;
+    document.getElementById("demo2").innerHTML= players[5].weight ;
+    document.getElementById("demo3").innerHTML= players[5].rank ;
+  }else if(arr[11]=="undertacker"){
+    document.getElementById("demo").innerHTML= players[6].height ;
+    document.getElementById("demo2").innerHTML= players[6].weight ;
+    document.getElementById("demo3").innerHTML= players[6].rank ;
+  }else if(arr[11]=="bigshow"){
+    document.getElementById("demo").innerHTML= +players[7].height ;
+    document.getElementById("demo2").innerHTML= +players[7].weight ;
+    document.getElementById("demo3").innerHTML= +players[7].rank ;
+  }else if(arr[11]=="gymmy"){
+    document.getElementById("demo").innerHTML= +players[8].height ;
+    document.getElementById("demo2").innerHTML= +players[8].weight ;
+    document.getElementById("demo3").innerHTML= +players[8].rank ;
+  }else if(arr[11]=="batista"){
+    document.getElementById("demo").innerHTML= +players[9].height ;
+    document.getElementById("demo2").innerHTML= +players[9].weight ;
+    document.getElementById("demo3").innerHTML= +players[9].rank ;
+  }else if(arr[11]=="bige"){
+    document.getElementById("demo").innerHTML= +players[10].height ;
+    document.getElementById("demo2").innerHTML= +players[10].weight ;
+    document.getElementById("demo3").innerHTML= +players[10].rank ;
+  }else if(arr[11]=="shemus"){
+    document.getElementById("demo").innerHTML= +players[11].height ;
+    document.getElementById("demo2").innerHTML= +players[11].weight ;
+    document.getElementById("demo3").innerHTML= +players[11].rank ;
+  }
+    }
+    }
+    function compare(y1){
+      var get = document.getElementById("demo").innerHTML;
+      if(y1>get){
+        document.getElementById("hed").innerHTML="player 2 is won";
+      }else{
+        document.getElementById("hed").innerHTML="player 1 is won";
+      }
+     
+    }
+  
+function navyfy(){
+  var displa=document.createElement("img");
+  displa.setAttribute("src","roman.png");
+  document.body.appendChild(displa);
+}
+
+</script>
+
+</body>
+</html>
